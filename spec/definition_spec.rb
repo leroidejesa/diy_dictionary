@@ -16,6 +16,22 @@ describe(Definition) do
     end
   end
 
+  describe("#plural_form") do
+    it("returns the plural form of word") do
+      test_definition = Definition.new({ :word_class => "noun", :plural_form => "Cacti", :actual_definition => "a succulent plant with typically sharp scales or spines" })
+      test_definition.save()
+      expect(test_definition.plural_form()).to(eq("Cacti"))
+    end
+  end
+
+  describe("#actual_definition") do
+    it("returns the definition of word") do
+      test_definition = Definition.new({ :word_class => "noun", :plural_form => "Cacti", :actual_definition => "a succulent plant with typically sharp scales or spines" })
+      test_definition.save()
+      expect(test_definition.actual_definition()).to(eq("a succulent plant with typically sharp scales or spines"))
+    end
+  end
+
   describe("#save") do
     it("adds a definition to the array of saved definitions") do
       test_definition = Definition.new({ :word_class => "noun", :plural_form => "Cacti", :actual_definition => "a succulent plant with typically sharp scales or spines" })

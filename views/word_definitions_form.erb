@@ -1,12 +1,9 @@
-<h1>ADD NEW ENTRY</h2>
+<h2>Add a new definition for "<%= @the_word %>":</h2>
 
-  <p>Fill out the following:</p>
+<p>
+  <form action="/words_definitions" method="post">
+    <input id='word_id' name='word_id' type='hidden' value='<%= @word.id() %>'>
 
-  <form action="/words" method="post">
-
-    <label for="word">Word:</label>
-    <input id="word" name="word" type="text">
-    <br>
     <label for="word_class">Class: (e.g. noun, verb, adjective, etc.)</label>
     <input id="word_class" name="word_class" type="text">
     <br>
@@ -19,8 +16,10 @@
     <button type="submit">Add</button>
 
   </form>
+</p>
 
 <br>
 <br>
 <br>
-<a href="/">Cancel</a>
+<a href="/words/<%= @word.id() %>">Cancel</a><br>
+<a href="/">Back to Dictionary</a>

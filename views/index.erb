@@ -1,10 +1,9 @@
-<h1>SubUrban Dictionary</h2>
-
+<h1><strong>DIY</strong><br>Dictionary</h1>
+<img src="http://static7.bigstockphoto.com/thumbs/2/6/1/small2/16262807.jpg">
   <ul>
     <% @words.each() do |word| %>
     <li><a href="/words/<%= word.id() %>"><%= word.word() %></li>
       <% end %>
     </ul>
 
-  <a href="/words/new">Add New Entry</a>
-  <!-- <a href="words"> -->
+  <a href="/words/new">add a new word!</a>
