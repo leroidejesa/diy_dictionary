@@ -1,0 +1,11 @@
+<h1><font color=#314775 face="courier new"><strong>LEROI's</font><br>DIY</strong><br><font color=#314775 face="serif">Dictionary</font></h1>
+<img src="http://static7.bigstockphoto.com/thumbs/2/6/1/small2/16262807.jpg">
+<br>
+<br>
+  <ul>
+    <% @words.each() do |word| %>
+      <li><a href="/words/<%= word.id() %>"><%= word.word() %></li>
+    <% end %>
+  </ul>
+
+<a href="/words/new">add a new word!</a>
