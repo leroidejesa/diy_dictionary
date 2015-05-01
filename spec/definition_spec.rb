@@ -10,7 +10,7 @@ describe(Definition) do
 
   describe("#word_class") do
     it("returns the class of word") do
-      test_definition = Definition.new("noun", "Cacti", "a succulent plant with typically sharp scales or spines")
+      test_definition = Definition.new({ :word_class => "noun", :plural_form => "Cacti", :actual_definition => "a succulent plant with typically sharp scales or spines" })
       test_definition.save()
       expect(test_definition.word_class()).to(eq("noun"))
     end
@@ -18,7 +18,7 @@ describe(Definition) do
 
   describe("#save") do
     it("adds a definition to the array of saved definitions") do
-      test_definition = Definition.new("noun", "Cacti", "a succulent plant with typically sharp scales or spines")
+      test_definition = Definition.new({ :word_class => "noun", :plural_form => "Cacti", :actual_definition => "a succulent plant with typically sharp scales or spines" })
       test_definition.save()
       expect(Definition.all()).to(eq([test_definition]))
     end
