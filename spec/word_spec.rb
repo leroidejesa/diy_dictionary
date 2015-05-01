@@ -46,4 +46,20 @@ describe(Word) do
     end
   end
 
+  describe('#definitions_list') do
+    it("initially returns an empty array of the word's definitions") do
+      test_word = Word.new("Ruby")
+      expect(test_word.definitions_list()).to(eq([]))
+    end
+  end
+
+  describe('#add_definition') do
+    it("adds a new definition to the word") do
+      test_word = Word.new("Ruby")
+      test_definition = Definition.new("A programming language")
+      test_word.add_definition(test_definition)
+      expect(test_word.definitions_list()).to(eq([test_definition]))
+    end
+  end
+
 end

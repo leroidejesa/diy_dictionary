@@ -5,6 +5,7 @@ class Word
   define_method(:initialize) do |word|
     @word = word
     @id = @@dictionary_storage.length.+(1)
+    @definitions_list = []
   end
 
   define_method(:word) do
@@ -35,6 +36,10 @@ class Word
       end
     end
     found_word
+  end
+
+  define_method(:definitions_list) do
+    @definitions_list
   end
 
 end
