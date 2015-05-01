@@ -1,20 +1,23 @@
 <h2>Add a new definition for "<%= @the_word %>":</h2>
 
+<br>
 <p>
   <form action="/words_definitions" method="post">
     <input id='word_id' name='word_id' type='hidden' value='<%= @word.id() %>'>
 
     <label for="word_class">Class: (e.g. noun, verb, adjective, etc.)</label>
+    <br>
     <input id="word_class" name="word_class" type="text">
-    <br>
+    <br><br>
     <label for="plural_form">Plural Form:</label>
+    <br>
     <input id="plural_form" name="plural_form" type="text">
-    <br>
+    <br><br>
     <label for="actual_definition">Definition:</label>
-    <input id="actual_definition" name="actual_definition" type="text">
     <br>
+    <input id="actual_definition" name="actual_definition" type="text">
+    <br><br>
     <button type="submit">Add</button>
-
   </form>
 </p>
 
