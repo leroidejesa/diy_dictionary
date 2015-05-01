@@ -1,0 +1,10 @@
+<h1>SubUrban Dictionary</h2>
+
+  <ul>
+    <% @words.each() do |word| %>
+    <li><a href="/words/<%= word.id() %>"><%= word.word() %></li>
+      <% end %>
+    </ul>
+
+  <a href="/words/new">Add New Entry</a>
+  <!-- <a href="words"> -->
