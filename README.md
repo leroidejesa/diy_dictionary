@@ -3,7 +3,7 @@ by leroi dejesa<br>
 copyright 2015, all rights reserved<br>
 license: MIT<br><br>
 
-HEROKU:<br><br>
+HEROKU: https://glacial-castle-4470.herokuapp.com/<br><br>
 
 DESCRIPTION: it's a website that lets you manually input words and their respective definitions(s).<br><br>
 
