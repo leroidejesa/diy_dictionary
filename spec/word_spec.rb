@@ -55,8 +55,8 @@ describe(Word) do
 
   describe('#add_definition') do
     it("adds a new definition to the word") do
-      test_word = Word.new("Ruby")
-      test_definition = Definition.new("A programming language")
+      test_word = Word.new("House")
+      test_definition = Definition.new("noun", "Houses", "a dwelling constructed by and for humans")
       test_word.add_definition(test_definition)
       expect(test_word.definitions_list()).to(eq([test_definition]))
     end
